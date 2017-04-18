@@ -1,0 +1,216 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_feedback_black"
+        android:padding="20dp" >
+
+        <RelativeLayout
+            android:id="@+id/relProfileImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:visibility="visible" >
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/ivProfileProfile"
+                android:layout_width="@dimen/dimen_profile_image_width"
+                android:layout_height="@dimen/dimen_profile_image_height"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dimen_profile_margin_left"
+                android:src="@drawable/default_user"
+                />
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                layout="@layout/progressbar" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/relProfileImage"
+            android:orientation="vertical" >
+
+            <com.cabrunzltd.user.component.MyFontEdittextView
+                android:id="@+id/etProfileFName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/text_fname"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/dimen_profile_textsize" />
+
+            <com.cabrunzltd.user.component.MyFontEdittextView
+                android:id="@+id/etProfileLName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_profile_margin_top"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/text_lname"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/dimen_profile_textsize" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relTop" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_profile_margin_left"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimen_profile_padding_bottom"
+            android:paddingLeft="@dimen/dimen_profile_padding"
+            android:paddingRight="@dimen/dimen_profile_padding"
+            android:paddingTop="@dimen/dimen_profile_padding" >
+
+            <com.cabrunzltd.user.component.MyFontEdittextView
+                android:id="@+id/etProfileEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edittext"
+                android:hint="@string/text_email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="@dimen/dimen_history_margin_left"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@drawable/color" />
+
+            <com.cabrunzltd.user.component.MyFontEdittextView
+                android:id="@+id/etProfilePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:hint="@string/text_passs"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/dimen_history_margin_left"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@drawable/color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:orientation="horizontal" >
+
+                <com.cabrunzltd.user.component.MyFontTextView
+                    android:id="@+id/tvProfileCountryCode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/activity_margin_register"
+                    android:layout_weight="0.4"
+                    android:background="@drawable/spinner_ab_default_holo_light_9"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/color_text_dark"
+                    android:visibility="gone" />
+
+                <com.cabrunzltd.user.component.MyFontEdittextView
+                    android:id="@+id/etProfileNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext"
+                    android:ems="10"
+                    android:hint="@string/text_number"
+                    android:inputType="phone"
+                    android:paddingLeft="@dimen/dimen_history_margin_left"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@drawable/color" />
+            </LinearLayout>
+
+            <com.cabrunzltd.user.component.MyFontEdittextView
+                android:id="@+id/etProfileAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:hint="@string/text_address"
+                android:paddingLeft="@dimen/dimen_history_margin_left"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@drawable/color"
+                android:visibility="gone" />
+
+            <com.cabrunzltd.user.component.MyFontEdittextView
+                android:id="@+id/etProfileBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:hint="@string/text_bio"
+                android:paddingLeft="@dimen/dimen_history_margin_left"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@drawable/color"
+                android:visibility="gone" />
+
+            <com.cabrunzltd.user.component.MyFontEdittextView
+                android:id="@+id/etProfileZipCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_edittext"
+                android:ems="10"
+                android:hint="@string/text_zip"
+                android:inputType="number"
+                android:paddingLeft="@dimen/dimen_history_margin_left"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@drawable/color"
+                android:visibility="gone" />
+
+            <com.cabrunzltd.user.component.MyFontTextView
+                android:id="@+id/etprofileTimezone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/spinner_ab_default_holo_light_9"
+                android:hint="@string/timezone"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@drawable/color"
+                android:textColorHint="@color/light_gray" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.cabrunzltd.user.component.MyFontButton
+        android:id="@+id/tvProfileSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_pickup"
+        android:gravity="center"
+        android:text="@string/text_submit"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

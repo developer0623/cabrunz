@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_background"
+    android:gravity="center_horizontal|bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/map_margin_bottom"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context=".MainActivity">
+
+
+
+        <ImageView
+            android:id="@+id/ivAppImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_profile_image_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:layout_margin="40dp"
+            android:background="@color/white"
+            android:src="@drawable/logo" />
+        <TextView
+            android:id="@+id/ivAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@null"
+            android:text="Client APP"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+    <RelativeLayout
+        android:id="@+id/rlLoginRegisterLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/activity_margin_register"
+                android:background="@drawable/sign_in_bg"
+                android:gravity="center"
+                android:text="@string/text_signin"
+                android:clickable="true"
+                android:onClick="signin_clicked"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/activity_margin_register"
+                android:background="@drawable/register_bg"
+                android:gravity="center"
+                android:text="@string/text_register"
+                android:clickable="true"
+                android:onClick="register_clicked"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

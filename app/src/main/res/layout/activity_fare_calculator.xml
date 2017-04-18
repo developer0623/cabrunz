@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cabrunzltd.user.FareCalculator" >
+
+    <Button
+        android:id="@+id/button_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_pickup"
+        android:gravity="center"
+        android:text="@string/text_submit"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_profile_margin_left"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dimen_profile_padding_bottom"
+        android:paddingLeft="@dimen/dimen_profile_padding"
+        android:paddingRight="@dimen/dimen_profile_padding"
+        android:paddingTop="@dimen/dimen_profile_padding" >
+
+        <AutoCompleteTextView
+            android:id="@+id/to_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@drawable/bg_edittext"
+            android:ems="10"
+            android:hint="Source"
+            android:inputType="textNoSuggestions"
+            android:textColor="@drawable/color" >
+
+            <requestFocus />
+        </AutoCompleteTextView>
+
+        <AutoCompleteTextView
+            android:id="@+id/from_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:ems="10"
+            android:hint="Destination"
+            android:inputType="textNoSuggestions"
+            android:textColor="@drawable/color" />
+    </LinearLayout>
+
+    <com.cabrunzltd.user.component.MyFontTextVieww
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="@string/text_estimate_fare"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/color_text"
+        android:visibility="gone" />
+
+    <com.cabrunzltd.user.component.MyFontTextVieww
+        android:id="@+id/estimated_fare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="220$"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/color_text"
+        android:visibility="gone" />
+
+</RelativeLayout>

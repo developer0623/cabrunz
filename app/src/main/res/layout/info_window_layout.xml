@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pin_detail_bg" >
+
+    <com.cabrunzltd.user.component.MyFontTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/locationtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:text="Location"
+        android:textColor="@color/white" />
+
+    <com.cabrunzltd.user.component.MyFontTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/infoaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/locationtitle"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:text="Address"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
+
+
+
+
+
+<!--  <com.automated.taxinow.component.MyFontTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/markerBubblePickMeUp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pin_detail_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:textColor="@color/white" />   -->

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Author: Amartya Ganguly -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_actionbar"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp" >
+
+    <LinearLayout
+        android:id="@+id/llPayeeChooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_bill_margin_one"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvPayeeChooser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_fav_address"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <com.cabrunzltd.user.component.MyFontEdittextView
+            android:id="@+id/etFavPlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/bg_edittext"
+            android:ems="10"
+            android:hint="@string/text_enter_fav"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/color_text_dark" />
+
+        <!-- <EditText -->
+        <!-- android:id="@+id/etFavPlace" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_marginRight="20dp" -->
+        <!-- android:layout_marginTop="10dp" -->
+        <!-- android:singleLine="true" -->
+        <!-- android:text="@string/text_enter_fav" -->
+        <!-- android:textAppearance="?android:attr/textAppearanceMedium" -->
+        <!-- android:textColor="#5f5d5e" /> -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_bill_margin_one"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="right"
+            android:text="CANCEL"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#5f5d5e" />
+
+        <TextView
+            android:id="@+id/tvOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:gravity="right"
+            android:text="SAVE"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#00b5e4" />
+    </LinearLayout>
+
+</LinearLayout>

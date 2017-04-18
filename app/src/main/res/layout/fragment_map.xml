@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        layout="@layout/destinationadressbar"
+        android:visibility="visible" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/tvServiceType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/mapFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                class ="com.google.android.gms.maps.SupportMapFragment"/>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                layout="@layout/my_marker"
+                android:visibility="gone"
+                tools:ignore="IncludeLayoutParam" />
+
+            <ImageButton
+                android:id="@+id/btnMyLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_margin="@dimen/ub_view_margin"
+                android:background="@drawable/ub_button_mylocation" />
+        </FrameLayout>
+
+        <com.cabrunzltd.user.component.MyFontButton
+            android:id="@+id/btnPickMeUp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.1"
+            android:background="@color/app_color_blue"
+            android:gravity="center"
+            android:text="@string/text_pickmeup"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_popup_big" />
+
+        <SlidingDrawer
+            android:id="@+id/drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/gridview_height"
+            android:layout_alignParentBottom="true"
+            android:content="@+id/gvTypes"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="false"
+            android:handle="@+id/btnSelectService"
+            android:visibility="gone"
+            android:layout_weight="0.00">
+
+            <com.cabrunzltd.user.component.MyFontButton
+                android:id="@+id/btnSelectService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_pickup"
+                android:text="@string/text_select_service"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white" />
+
+            <GridView
+                android:id="@+id/gvTypes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_select_service"
+                android:columnWidth="100dp"
+                android:gravity="center"
+                android:horizontalSpacing="10dip"
+                android:numColumns="2"
+                android:stretchMode="spacingWidthUniform"
+                android:verticalSpacing="10dip" />
+        </SlidingDrawer>
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            layout="@layout/pickuppop"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

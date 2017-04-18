@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <com.cabrunzltd.user.component.MyFontEdittextView
+        android:id="@+id/promo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/bg_edittext"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="Enter Promo Code"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@drawable/color"
+        android:capitalize="characters" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/promo"
+        android:layout_marginTop="80dp" >
+
+        <com.cabrunzltd.user.component.MyFontButton
+            android:id="@+id/promoApply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="APPLY"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+        <com.cabrunzltd.user.component.MyFontButton
+            android:id="@+id/promoCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="CLOSE"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/promoresponse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/promo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:gravity="center"
+        android:textColor="@color/orange"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

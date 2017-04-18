@@ -1,0 +1,298 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_feedback_black"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/ivDriverImage"
+                android:layout_width="@dimen/dimen_profile_image_width"
+                android:layout_height="@dimen/dimen_profile_image_height"
+                android:layout_centerInParent="true"
+                android:src="@drawable/default_user"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <com.cabrunzltd.user.component.MyFontTextView
+                android:id="@+id/tvClientName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Samantha Ayrton"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_feedback_text" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/feedbackRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="2.5"
+                android:stepSize="0.5" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <com.cabrunzltd.user.component.MyFontTextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_margin_register"
+                android:drawableLeft="@drawable/clock"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="0"
+                android:textAllCaps="true"
+                android:textColor="@color/app_color_blue" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/black"
+            android:src="@drawable/line_divider" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <com.cabrunzltd.user.component.MyFontTextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_margin_register"
+                android:drawableLeft="@drawable/mile"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:textAllCaps="true"
+                android:textColor="@color/app_color_blue" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <!-- <include -->
+    <!-- android:id="@+id/feedbackView" -->
+    <!-- layout="@layout/include_feedback_view" /> -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginTop="@dimen/feedback_margin" > -->
+
+
+    <!-- <com.automated.taxinow.component.MyFontTextView -->
+    <!-- android:id="@+id/tvTime" -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:drawablePadding="@dimen/feedback_padding" -->
+    <!-- android:drawableTop="@drawable/clock" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="Button" -->
+    <!-- android:textAllCaps="true" -->
+    <!-- android:textAppearance="?android:attr/textAppearanceSmall" -->
+    <!-- android:textColor="@color/color_app_gray" /> -->
+
+
+    <!-- <ImageView -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:background="@null" -->
+    <!-- android:src="@drawable/line_divider" /> -->
+
+
+    <!-- <com.automated.taxinow.component.MyFontTextView -->
+    <!-- android:id="@+id/tvDistance" -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:drawablePadding="@dimen/feedback_padding" -->
+    <!-- android:drawableTop="@drawable/mile" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="Button" -->
+    <!-- android:textAllCaps="true" -->
+    <!-- android:textAppearance="?android:attr/textAppearanceSmall" -->
+    <!-- android:textColor="@color/color_app_gray" /> -->
+
+
+    <!-- <ImageView -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:background="@null" -->
+    <!-- android:src="@drawable/line_divider" -->
+    <!-- android:visibility="gone" /> -->
+
+
+    <!-- <com.automated.taxinow.component.MyFontTextView -->
+    <!-- android:id="@+id/button3" -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:drawablePadding="@dimen/feedback_padding" -->
+    <!-- android:drawableTop="@drawable/task_1" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="Task 1" -->
+    <!-- android:textAppearance="?android:attr/textAppearanceSmall" -->
+    <!-- android:textColor="@color/color_app_gray" -->
+    <!-- android:visibility="gone" /> -->
+
+
+    <!-- <ImageView -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:background="@null" -->
+    <!-- android:src="@drawable/line_divider" -->
+    <!-- android:visibility="gone" /> -->
+
+
+    <!-- <com.automated.taxinow.component.MyFontTextView -->
+    <!-- android:id="@+id/button4" -->
+    <!-- android:layout_width="0dp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:drawablePadding="@dimen/feedback_padding" -->
+    <!-- android:drawableTop="@drawable/task_2" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="Task 2" -->
+    <!-- android:textAppearance="?android:attr/textAppearanceSmall" -->
+    <!-- android:textColor="@color/color_app_gray" -->
+    <!-- android:visibility="gone" /> -->
+    <!-- </LinearLayout> -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_feedback_bg_white"
+        android:orientation="vertical" >
+
+        <com.cabrunzltd.user.component.MyFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/feedback_margin_one"
+            android:layout_marginLeft="@dimen/feedback_margin_two"
+            android:layout_marginTop="@dimen/feedback_margin_three"
+            android:text="@string/text_your_feedback"
+            android:textColor="#38569b" />
+
+        <com.cabrunzltd.user.component.MyFontEdittextView
+            android:id="@+id/etComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/feedback_margin_two"
+            android:layout_marginRight="@dimen/feedback_margin_two"
+            android:layout_marginTop="@dimen/feedback_margin_three"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="@string/text_comment"
+            android:lines="4"
+            android:maxLines="4"
+            android:minLines="4"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/color_app_gray" />
+
+        <!-- <com.automated.taxinow.component.MyFontTextView -->
+        <!-- android:id="@+id/etComment" -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_marginLeft="@dimen/feedback_margin_two" -->
+        <!-- android:layout_marginRight="@dimen/feedback_margin_two" -->
+        <!-- android:background="@null" -->
+        <!-- android:ems="10" -->
+        <!-- android:gravity="top" -->
+        <!-- android:hint="@string/text_your_feedback_commit" -->
+        <!-- android:textAppearance="?android:attr/textAppearanceSmall" -->
+        <!-- android:textColor="@color/color_app_gray" /> -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|end"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" 
+            android:visibility="visible">
+
+            <com.cabrunzltd.user.component.MyFontButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_color_blue"
+                android:gravity="center"
+                android:text="@string/text_submit"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+             <com.cabrunzltd.user.component.MyFontButton
+            android:id="@+id/btnSkip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:background="@color/app_color_blue"
+            android:gravity="center"
+            android:text="@string/text_skip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

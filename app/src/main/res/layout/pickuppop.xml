@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pickuppop"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pickpop_background"
+    android:visibility="visible" >
+
+    <com.cabrunzltd.user.component.MyFontButton
+        android:id="@+id/btnpayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/btn_pickpop"
+        android:gravity="center_vertical|center_horizontal"
+        android:singleLine="true"
+        android:text="Select Payment Method"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnpayment"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp" >
+
+        <com.cabrunzltd.user.component.MyFontButton
+            android:id="@+id/btnfareestimate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnpayment"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pickpop"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Fare Estimate"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black_label" />
+
+        <com.cabrunzltd.user.component.MyFontButton
+            android:id="@+id/btnpromocode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnpayment"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pickpop"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Promo Code"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black_label" />
+
+        <com.cabrunzltd.user.component.MyFontButton
+            android:id="@+id/btnratecard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnpayment"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pickpop"
+            android:gravity="center_vertical"
+            android:text="Fare Breakdown"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black_label" />
+    </LinearLayout>
+
+    <com.cabrunzltd.user.component.MyFontButton
+        android:id="@+id/btnconfirmservice"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black_label"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Request sedan"
+        android:visibility="invisible"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/eta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnconfirmservice"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="PICK UP TIME IS APROXIMATELY 2 MIN"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/gray" />
+
+</RelativeLayout>

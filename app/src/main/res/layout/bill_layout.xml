@@ -1,0 +1,439 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/relMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_bill_trans"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_bill"
+                    android:gravity="center_horizontal" >
+
+                    <com.cabrunzltd.user.component.MyTitleFontTextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@drawable/bill_paper"
+                        android:text="@string/text_invoice"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_invoice_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_bill_margin_one"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dimen_bill_padding_one"
+                    android:paddingRight="@dimen/dimen_bill_padding_two" >
+
+                    <com.cabrunzltd.user.component.MyFontTextView
+                        android:id="@+id/tvBasePriceText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:layout_marginRight="@dimen/dimen_bill_margin_two"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="@string/text_base_price"
+                        android:textColor="@color/color_app_gray"
+                        android:textSize="@dimen/dimen_invoice_baseprice"
+                        android:textStyle="bold" />
+
+                    <com.cabrunzltd.user.component.MyTitleFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_bill_margin_three"
+                        android:gravity="center"
+                        android:text="$"
+                        android:textColor="@color/color_text"
+                        android:textSize="@dimen/invoice_price_font"
+                        android:visibility="gone" />
+
+                    <com.cabrunzltd.user.component.MyTitleFontTextView
+                        android:id="@+id/tvBasePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_bill_margin_three"
+                        android:drawableLeft="@drawable/n"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="60.00"
+                        android:textColor="@color/color_text"
+                        android:textSize="@dimen/invoice_price_font" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_bill_line"
+                    android:background="@drawable/line" />
+
+                <LinearLayout
+                    android:id="@+id/llQuotedPriceWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_bill_margin_one"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dimen_bill_padding_one"
+                    android:paddingRight="@dimen/dimen_bill_padding_two"
+                    android:visibility="visible" >
+
+                    <com.cabrunzltd.user.component.MyFontTextView
+                        android:id="@+id/tvQuotedPriceText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:layout_marginRight="@dimen/dimen_bill_margin_two"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="@string/text_quoted_price"
+                        android:textColor="@color/color_app_gray"
+                        android:textSize="@dimen/dimen_invoice_baseprice"
+                        android:textStyle="bold" />
+
+                    <com.cabrunzltd.user.component.MyTitleFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_bill_margin_three"
+                        android:gravity="center"
+                        android:text="$"
+                        android:textColor="@color/color_text"
+                        android:textSize="@dimen/invoice_price_font"
+                        android:visibility="gone" />
+
+                    <com.cabrunzltd.user.component.MyTitleFontTextView
+                        android:id="@+id/tvQuotedPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_bill_margin_three"
+                        android:drawableLeft="@drawable/n"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="60.00"
+                        android:textColor="@color/color_text"
+                        android:textSize="@dimen/invoice_price_font" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/quotedPriceBaseLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_bill_line"
+                    android:background="@drawable/line"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_bill_second_top"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dimen_bill_padding_one"
+                    android:paddingRight="@dimen/dimen_bill_padding_two" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_bill_margin_two"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <com.cabrunzltd.user.component.MyFontTextView
+                            android:id="@+id/tvDistCost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|right"
+                            android:text="@string/text_distance_cost"
+                            android:textColor="@color/color_app_gray"
+                            android:textSize="@dimen/dimen_invoice_baseprice"
+                            android:textStyle="bold" />
+
+                        <com.cabrunzltd.user.component.MyTitleFontTextView
+                            android:id="@+id/tvBillDistancePerMile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|right"
+                            android:text="@string/text_base_price"
+                            android:textColor="@color/color_app_gray"
+                            android:textSize="@dimen/invoice_base_price_small" />
+                    </LinearLayout>
+
+                    <com.cabrunzltd.user.component.MyTitleFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_bill_margin_three"
+                        android:gravity="center"
+                        android:text="$"
+                        android:textColor="@color/color_text"
+                        android:textSize="@dimen/invoice_price_font"
+                        android:visibility="gone" />
+
+                    <com.cabrunzltd.user.component.MyTitleFontTextView
+                        android:id="@+id/tvDis1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_bill_margin_three"
+                        android:drawableLeft="@drawable/n"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_text"
+                        android:textSize="@dimen/invoice_price_font" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_bill_second_top"
+                    android:background="@drawable/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_bill_line"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dimen_bill_padding_one"
+                    android:paddingRight="@dimen/dimen_bill_padding_two" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_bill_margin_two"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <com.cabrunzltd.user.component.MyFontTextView
+                            android:id="@+id/tvTimeCost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|right"
+                            android:text="@string/text_time_cost"
+                            android:textColor="@color/color_app_gray"
+                            android:textSize="@dimen/dimen_invoice_baseprice"
+                            android:textStyle="bold" />
+
+                        <com.cabrunzltd.user.component.MyTitleFontTextView
+                            android:id="@+id/tvBillTimePerHour"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|right"
+                            android:text="@string/text_base_price"
+                            android:textColor="@color/color_app_gray"
+                            android:textSize="@dimen/invoice_base_price_small" />
+                    </LinearLayout>
+
+                    <com.cabrunzltd.user.component.MyTitleFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_bill_margin_three"
+                        android:gravity="center"
+                        android:text="$"
+                        android:textColor="@color/color_text"
+                        android:textSize="@dimen/invoice_price_font"
+                        android:visibility="gone" />
+
+                    <com.cabrunzltd.user.component.MyTitleFontTextView
+                        android:id="@+id/tvTime1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_bill_margin_three"
+                        android:drawableLeft="@drawable/n"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_text"
+                        android:textSize="@dimen/invoice_price_font" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_bill_line"
+                    android:background="@drawable/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_bill_line"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dimen_bill_padding_one"
+                    android:paddingRight="@dimen/dimen_bill_padding_two" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_bill_margin_two"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <com.cabrunzltd.user.component.MyFontTextView
+                            android:id="@+id/tvTotalCost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|right"
+                            android:text="TOTAL"
+                            android:textColor="@color/color_app_gray"
+                            android:textSize="@dimen/invoice_base_price_small"
+                            android:textStyle="bold" />
+
+                        <com.cabrunzltd.user.component.MyTitleFontTextView
+                            android:id="@+id/tvyousave"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|right"
+                            android:text="YOU SAVE"
+                            android:textColor="@color/color_app_gray"
+                            android:textSize="@dimen/invoice_base_price_small"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <com.cabrunzltd.user.component.MyTitleFontTextView
+                            android:id="@+id/tvtotalcostvalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/color_app_gray"
+                            android:textSize="@dimen/invoice_base_price_small" />
+
+                        <com.cabrunzltd.user.component.MyTitleFontTextView
+                            android:id="@+id/tvyousavevalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="0dp"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/color_app_gray"
+                            android:textSize="@dimen/invoice_base_price_small" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_bill_line"
+                    android:background="@drawable/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dimen_bill_padding_one"
+                        android:paddingRight="@dimen/dimen_bill_padding_two" >
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_bill_second_top"
+                            android:gravity="center"
+                            android:text="@string/text_total"
+                            android:textColor="@color/color_app_gray"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <com.cabrunzltd.user.component.MyTitleFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dimen_bill_margin_three"
+                                android:gravity="center"
+                                android:text="$"
+                                android:textColor="@color/color_text"
+                                android:textSize="@dimen/dimen_bill_text"
+                                android:visibility="gone" />
+
+                            <com.cabrunzltd.user.component.MyTitleFontTextView
+                                android:id="@+id/tvTotal1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/nn"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:text="60.00"
+                                android:textColor="@color/color_text"
+                                android:textSize="@dimen/dimen_bill_text" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|end"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom" >
+
+                <com.cabrunzltd.user.component.MyFontButton
+                    android:id="@+id/btnReject"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/app_color_red"
+                    android:text="@string/text_decline"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <com.cabrunzltd.user.component.MyFontButton
+                    android:id="@+id/btnPay"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/app_color_blue"
+                    android:text="@string/text_pay"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+</RelativeLayout>

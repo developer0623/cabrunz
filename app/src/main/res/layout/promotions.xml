@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <com.cabrunzltd.user.component.MyFontEdittextView
+        android:id="@+id/promotionpromo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/bg_edittext"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="Enter Promo Code"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@drawable/color"
+        android:capitalize="characters" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/promotionpromo"
+        android:layout_marginTop="40dp" >
+
+        <com.cabrunzltd.user.component.MyFontButton
+            android:id="@+id/promotionpromoApply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="0"
+            android:background="@color/gray"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="APPLY"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+        <com.cabrunzltd.user.component.MyFontButton
+            android:id="@+id/promotionpromoCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="CANCEL"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/promotionpromo"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="106dp"
+        android:text="WALLET"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/app_actionbar_blue" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/app_actionbar_blue" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="Your Current Credit Balance"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/app_actionbar_blue" />
+
+    <TextView
+        android:id="@+id/creditbalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="---"
+        android:textSize="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/app_actionbar_blue" />
+
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progressLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/bg_white_process"
+    android:orientation="vertical"
+    android:visibility="visible" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/app_actionbar_blue"
+        android:gravity="center_vertical|left"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/btnback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/icon_back" />
+
+        <com.cabrunzltd.user.component.MyFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginLeft="30dp"
+            android:singleLine="true"
+            android:text="@string/text_referral_code"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <com.cabrunzltd.user.component.MyFontTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginLeft="@dimen/activity_margin_register"
+        android:layout_marginTop="20dp"
+        android:singleLine="true"
+        android:text="@string/text_your_referral_code"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/gray" />
+
+    <com.cabrunzltd.user.component.MyFontTextView
+        android:id="@+id/tvReferralCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginLeft="@dimen/activity_margin_register"
+        android:singleLine="true"
+        android:text="@string/text_referral_code"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:visibility="gone" >
+
+        <!-- <ImageView -->
+        <!-- android:id="@+id/pBar" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:background="@drawable/loading" -->
+        <!-- android:visibility="gone" > -->
+        <!-- </ImageView> -->
+
+        <com.cabrunzltd.user.component.MyFontTextView
+            android:id="@+id/blinkingtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="top"
+            android:paddingBottom="60dp"
+            android:text="CREATE YOUR REFERRAL CODE"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_text"
+            android:visibility="invisible" />
+
+        <com.cabrunzltd.user.component.MyFontEdittextView
+            android:id="@+id/edit_referal_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/bg_edittext"
+            android:capitalize="characters"
+            android:ems="10"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:hint="Enter Refferal code" />
+
+        <com.cabrunzltd.user.component.MyFontTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center"
+            android:text="@string/text_ref_code"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_text"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <com.cabrunzltd.user.component.MyFontButton
+            android:id="@+id/btnupdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_small"
+            android:gravity="center"
+            android:text="@string/text_share_with_friend"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <CheckBox
+        android:id="@+id/rd1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="Sunday"
+        android:textColor="#38569b"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/rd2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:text="Monday"
+        android:textColor="#38569b"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/rd3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:text="Tuesday"
+        android:textColor="#38569b"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/rd4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:text="Wednesday"
+        android:textColor="#38569b"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/rd5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:text="Thursday"
+        android:textColor="#38569b"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/rd6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:text="Friday"
+        android:textColor="#38569b"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/rd7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:text="Saturday"
+        android:textColor="#38569b"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnsubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#38569b"      
+        android:text="Schedule Trip"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

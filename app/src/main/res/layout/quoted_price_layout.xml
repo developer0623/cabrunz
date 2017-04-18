@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Author: Amartya Ganguly -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_actionbar"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp" >
+
+    <!-- Choice of Price: Driver Quoted or Exact Amount -->
+
+    <LinearLayout
+        android:id="@+id/llPriceChooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvPriceChooser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose the amount you want to pay" />
+
+        <RadioGroup
+            android:id="@+id/priceChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/priceChoiceActual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$ 60.00" />
+
+            <RadioButton
+                android:id="@+id/priceChoiceQuoted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$ 70.00" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- Border between -->
+
+
+    <!-- Choice of payee: Friend or Self -->
+
+    <LinearLayout
+        android:id="@+id/llPayeeChooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_bill_margin_one"
+        android:orientation="vertical" >
+
+        <com.cabrunzltd.user.component.MyTitleFontTextView
+            android:id="@+id/tvPayeeChooser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_pay_trip"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black" />
+
+        <RadioGroup
+            android:id="@+id/payeeChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/payeeChoiceSelf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Me" />
+
+            <RadioButton
+                android:id="@+id/payeeChoiceFriend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="My friend" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etFriendEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_bill_margin_two"
+            android:hint="My friend&apos;s mail id"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/ub_textsize_medium"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <com.cabrunzltd.user.component.MyFontTextView
+        android:id="@+id/tvSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:text="SEARCH"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/app_color_blue"
+        android:textStyle="bold" />
+
+</LinearLayout>
